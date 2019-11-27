@@ -14,10 +14,10 @@ public class QueryDAOImpl implements QueryDAO {
 
     private EntityManager entityManager;
 
-    @Override
-    public void setEntityManager(EntityManager entityManager) {
-        this.entityManager = entityManager;
-    }
+//    @Override
+//    public void setEntityManager(EntityManager entityManager) {
+//        this.entityManager = entityManager;
+//    }
 
     @Override
     public CustomEntity getOrderInfo(int orderId) throws Exception {
