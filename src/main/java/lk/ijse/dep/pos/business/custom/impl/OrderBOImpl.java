@@ -1,7 +1,7 @@
 package lk.ijse.dep.pos.business.custom.impl;
 
 import lk.ijse.dep.pos.business.custom.OrderBO;
-import lk.ijse.dep.pos.dao.custom.*;
+import lk.ijse.dep.pos.dao.*;
 import lk.ijse.dep.pos.dto.OrderDTO;
 import lk.ijse.dep.pos.dto.OrderDTO2;
 import lk.ijse.dep.pos.dto.OrderDetailDTO;
@@ -9,8 +9,6 @@ import lk.ijse.dep.pos.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.EntityManager;
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
