@@ -5,6 +5,7 @@ import lk.ijse.dep.pos.entity.CustomEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.sql.Date;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.List;
 @Repository
 public class QueryDAOImpl implements QueryDAO {
 
+    @PersistenceContext
     private EntityManager entityManager;
 
 //    @Override

@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface OrderDetailDAO extends JpaRepository<OrderDetail, OrderDetailPK> {
 
-    @Query(value = "SELECT * FROM OrderDetail WHERE item_code=?1",nativeQuery = true)
+    @Query(value = "SELECT IF(EXISTS (SELECT item_code FROM OrderDetail WHERE item_code=?1),'TRUE','FALSE') AS item_code",nativeQuery = true)
     boolean existsByItemCode(String itemCode) throws Exception;
 
 }
