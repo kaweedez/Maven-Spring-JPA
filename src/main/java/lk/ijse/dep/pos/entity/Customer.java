@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@NamedQuery(query = "SELECT c FROM Customer c", name = "Customer.namedQuery1")
+@NamedNativeQuery(query = "SELECT * FROM Customer WHERE id=?", name = "Customer.namedNativeQuery", resultClass = Customer.class)
+//@NamedNativeQuery(query = "SELECT * FROM Customer WHERE id=?#{[0]} AND name=?#{[1]}", name = "Customer.anotherNamedNativeQuerySpell", resultClass = Customer.class)
 public class Customer implements SuperEntity{
 
     @Id

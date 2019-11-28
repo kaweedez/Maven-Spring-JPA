@@ -1,6 +1,6 @@
 package lk.ijse.dep.pos.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class CustomEntity implements SuperEntity {
 
@@ -11,6 +11,11 @@ public class CustomEntity implements SuperEntity {
     private double orderTotal;
 
     public CustomEntity() {
+    }
+
+    public CustomEntity(String customerName, Date orderDate) {
+        this.customerName = customerName;
+        this.orderDate = orderDate;
     }
 
     public CustomEntity(int orderId, String customerId, String customerName, Date orderDate) {
